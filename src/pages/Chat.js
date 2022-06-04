@@ -40,7 +40,7 @@ function Chat() {
     async function fetchData(){
       if (currentUser) {
         if (currentUser.isAvatarImageSet) {
-          const data = await axios.get(`http://localhost:8080/allusers/${currentUser._id}`);
+          const data = await axios.get(`https://smilechat-app.herokuapp.com/allusers/${currentUser._id}`);
           setContacts(data.data);
           console.log(data)
         } else {

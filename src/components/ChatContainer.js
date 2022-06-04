@@ -12,7 +12,7 @@ function ChatContainer({ currentChat, currentUser, socket }) {
     useEffect(() => {
         async function fetchData() {
             if(currentChat){
-                const response = await axios.post('http://localhost:8080/getmsg', {
+                const response = await axios.post('https://smilechat-app.herokuapp.com/getmsg', {
                 from: currentUser._id,
                 to: currentChat._id,
             })
@@ -22,7 +22,7 @@ function ChatContainer({ currentChat, currentUser, socket }) {
         fetchData()
     }, [currentChat])
     const handleSendMsg = async (msg) => {
-        await axios.post('http://localhost:8080/addmsg', {
+        await axios.post('https://smilechat-app.herokuapp.com/addmsg', {
             from: currentUser._id,
             to: currentChat._id,
             message: msg,

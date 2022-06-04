@@ -25,7 +25,7 @@ function SetAvatar() {
             toast.error("Please Select Profile pic",toastOptions);
         }else{
             const user =await JSON.parse(localStorage.getItem("chat-app-user"));
-            const {data}=await axios.post(`http://localhost:8080/setavatar/${user._id}`,{
+            const {data}=await axios.post(`https://smilechat-app.herokuapp.com/setavatar/${user._id}`,{
                 image:avatars[selectedAvatar],
             });
             if (data.isSet){

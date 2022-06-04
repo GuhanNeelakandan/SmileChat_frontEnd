@@ -25,7 +25,7 @@ function Register() {
         e.preventDefault();
         if(handleValidation()){
             const { password, confirmPassword, username, email } = value;
-            const {data}=await axios.post("http://localhost:8080/register",{
+            const {data}=await axios.post("https://smilechat-app.herokuapp.com/register",{
                 username,
                 email,
                 password

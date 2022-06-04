@@ -23,7 +23,7 @@ function Login() {
         e.preventDefault();
         if(handleValidation()){
             const { password,username} = value;
-            const {data}=await axios.post("http://localhost:8080/login",{
+            const {data}=await axios.post("https://smilechat-app.herokuapp.com/login",{
                 username,
                 password
             })
