@@ -31,7 +31,7 @@ function Chat() {
   }, []);
   useEffect(()=>{
     if(currentUser){
-      socket.current=io("http://localhost:8080");
+      socket.current=io("https://smilechat-app.herokuapp.com");
       socket.current.emit("add-user",currentUser._id);
     }
   },[currentUser])
