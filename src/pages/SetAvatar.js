@@ -62,7 +62,7 @@ function SetAvatar() {
     }, [])
     return (
         <>
-        {isLoading ? <img src={loader} alt="loader" className="loader" />:
+        {isLoading ?<div className="container-fluid avatar-page"><img src={loader} alt="loader" className="loader" /></div> :
         <div className="container-fluid avatar-page">
         <div className="title-container">
             <h1>Pick an avatar as your profile pic</h1>
