@@ -71,7 +71,7 @@ function Login() {
                     <div>
                         <div className='test-user'>Testing:
                             <p>username:  test<br></br>
-                            password:  admin123</p>
+                            password:  12345678</p>
                         </div>
                     </div>
                 </form>
